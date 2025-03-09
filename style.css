@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+*{
+    text-decoration:none;
+    list-style:none;
+    font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-repeat:no-repeat;
+    background-color:#EDF7F6;
+}
+.navbar{
+    position:fixed;
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+   /* box-shadow:2px 2px 20px 2px #f2f2f2;
+   */
+}
+li{
+    display:inline;
+}
+a{
+    color:#fff;
+}
+.navelements{
+    position:absolute;
+    display:flex;
+    right:1.5vw;
+    top:0.5vw;
+}
+.navhead{
+    position:absolute;
+    display:flex;
+    left:2vw;
+    top:1.5vw;
+}
+.navhead img{
+    height:2vw;
+}
+.navelements a{
+    font-weight:550;
+    margin-right:3vw;
+}
+.navelements a:hover{
+    color:#c4c3c3;
+}
+.navhead a{
+    font-weight:700;
+    font-size:x-large;
+}
+
+.background{
+    position:absolute;
+    width:100%;
+    z-index:-1;
+    top:0;
+    left:0;
+    height:45vw;
+
+}
+.home{
+    color:white;
+    position:absolute;
+    top:15%;
+    font-weight:900;
+    font-size: x-large;
+    width:26vw;
+    left:32%;
+    background:linear-gradient(20deg,white,rgb(118, 118, 118));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    border-radius:2vw;
+    align-items:center;
+    padding-left:5vw;
+    padding-right:5vw;
+    z-index:-1;
+}
+.home p{
+    position:absolute;
+    font-weight:900;
+    font-size: xxx-large;
+    width:20vw;
+    left:5vw;
+    top:3.5vw;
+    background:linear-gradient(20deg,purple,orange);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    align-items:center;
+    padding-left:0vw;
+    padding-right:5vw;
+    z-index:-1;
+    /*border-bottom:solid orange 0.2vw;*/
+}
+.grid {
+    display:grid;
+    grid-template-columns:repeat(3,30vw);
+    margin-left:5vw;
+    top:109vw;
+   padding-right:30vw;
+}
+.grid0{
+    height:10vw;
+    width:20vw;
+}
+/*
+.grid1{
+
+}
+.grid2{
+
+}
+*/
+    
+    .intro{
+        position:absolute;
+        z-index:-1;
+        display:flex;
+        font-weight:400;
+        margin-top:5vw;
+        color:white;
+        left:1vw;
+        font-size:large;
+    }
+    .services{
+        position:absolute;
+        z-index:-1;
+        top:45vw;
+        left:-3vw;
+        background-image:url("buble.jpg");
+       background:linear-gradient(45deg,purple,orange);
+        background-clip:text;
+        -webkit-background-clip:text;
+        color:transparent; 
+        font-weight:900;
+        font-size: xx-large;
+        width:50vw;
+        padding-left:4vw;
+    }
+
+    .facebook{
+        margin-right:2vw;
+        color:black;
+        font-size:x-large;
+        font-weight:600;
+        background-color:white;
+        height:18vw;
+        width:20vw;
+        margin-top:3vw;
+        padding-left:2vw;
+        padding-right:1vw;
+        padding-top:2vw;
+        border-radius:2vw;
+        box-shadow:1px 1px 20px 1px #2f2f2f;
+    }
+    .facebook button{
+        color:white;
+        background-color:black;
+        border-radius:1vw;
+        padding:0.61vw;
+        border:black solid 0.1vw;
+        margin-left:10vw;
+        box-shadow:1px 1px 6px 1px #2f2f2f;
+    }
+    .grid button:hover{
+        background-color:#2f2f2f;
+    }
+    .facebook p{
+        font-size:medium;
+        font-weight:300;
+    }
+    .instagram{
+        margin-top:3vw;
+        margin-right:2vw;
+        color:black;
+        font-size:x-large;
+        font-weight:600;
+        background-color:white;
+        height:18vw;
+        width:20vw;
+        padding-left:2vw;
+        padding-right:1vw;
+        padding-top:2vw;
+        border-radius:2vw;
+        box-shadow:1px 1px 20px 1px #2f2f2f;
+    }
+    .instagram button{
+        color:white;
+        background-color:black;
+        border-radius:1vw;
+        padding:0.61vw;
+        border:black solid 0.1vw;
+        margin-left:10vw;
+        box-shadow:1px 1px 6px 1px #2f2f2f;
+    }
+    .instagram p{
+        font-size:medium;
+        font-weight:300;
+    }
+    .seo p{
+        font-size:medium;
+        font-weight:300;
+    }
+    .seo{
+        margin-top:3vw;
+        margin-right:2vw;
+        color:black;
+        font-size:x-large;
+        font-weight:600;
+        background-color:white;
+        height:18vw;
+        width:20vw;
+        padding-left:2vw;
+        padding-right:1vw;
+        padding-top:2vw;
+        border-radius:2vw;
+        box-shadow:1px 1px 20px 1px #2f2f2f;
+    }
+    .seo button{
+        color:white;
+        background-color:black;
+        border-radius:1vw;
+        padding:0.61vw;
+        border:black solid 0.1vw;
+        margin-left:10vw;
+        box-shadow:1px 1px 6px 1px #2f2f2f;
+    }
+    .services h1{
+        margin-left:6vw;
+        border-bottom:solid orange 0.2vw;
+    }
+
+    .contact{
+        position:absolute;
+        display:flex;
+        z-index:-1;
+        top:120vw;
+        height:30vw;
+        color:black;
+        width:100%;
+        left:0;
+        align-items:center;
+        padding-left:0vw;
+        overflow:hidden;
+    }
+    .contact img{
+        position:absolute;
+        height:30vw;
+        width:auto;
+        left:0vw;
+        top:-2vw;
+    }
+    .contacthead{
+        position:absolute;
+        left:40%;
+        top:0vw;
+        font-weight:700;
+        font-size:xxx-large;
+        border-bottom:orange solid 0.35vw;
+        width:20vw;
+    }
+    .contacthead-element{ 
+        position:absolute;
+        color:rgb(2, 151, 210);
+        left:46vw;
+        top:6.65vw;
+        font-weight:700;
+        font-size:2vw;
+        font-style:italic;
+    }
+    .contacthead-element2{
+        position:absolute;
+        color:black;
+        left:51vw;
+        top:7vw;
+        font-weight:500;
+        font-size:1.8vw;
+        font-style:italic;
+    }
+    .info2{
+        color:orange;
+    }
+    .navbar2{
+        position:fixed;
+        display:flex;
+        justify-content:space-between;
+        width:100%;
+        top:0;
+        left:0;
+       box-shadow:2px 2px 20px 2px #2f2f2f;
+    }
+    .navelements2 a{
+        color:black;
+    }
+    .navhead2{
+        position:absolute;
+        display:flex;
+        left:0;
+        top:0;
+        background:linear-gradient(45deg,purple,orange);
+        padding-left:1.5vw;
+        padding-top:1.5vw;
+        padding-bottom:1vw;
+        width:100%;
+        box-shadow:2px 2px 20px 2px purple;
+        transition: all 1s;
+    }
+    .grid-content0{
+        color:white;
+        font-size:medium;
+        width:15vw;
+        margin-top:2vw;
+        margin-left:-0.81vw;
+        padding-left:1.5vw;
+        padding-top:1.5vw;
+        padding-bottom:1.5vw;
+        background-image:url(gridbg.jpeg);
+        border-radius:2vw;
+        box-shadow:1px 1px 20px 1px #2f2f2f;
+    }
+    .contactgrid-content0{
+        border-right:orange solid 0.11vw;
+        height:8vw;
+        width:15vw;
+        margin-left:38vw;
+        padding:1vw;
+        padding-top:2vw;
+        font-weight:500;
+        margin-top:10vw;
+    }
+    .contactgrid-content1{
+        border-right:orange solid 0.11vw;
+        height:8vw;
+        width:15vw;
+        padding:1vw;
+        padding-top:2vw;
+        font-weight:500;
+        margin-top:10vw;
+    }
+    .contactgrid-content2{
+        height:8vw;
+        width:15vw;
+        padding:1vw;
+        font-weight:500;
+        margin-top:11vw;
+    }
+  .mission{
+    position:absolute;
+    top:90vw;
+    left:0;
+    background-image:url("missionbackground.jpg");
+    height:30vw;
+    width:100%;
+    z-index:-1;
+  }
+
+  .mission h1{
+    position:absolute;
+    display:flex;
+    left:60vw;
+    top:0vw;
+    background:linear-gradient(45deg,purple,orange);
+    background-clip:text;
+    -webkit-background-clip: text;
+    color:transparent;
+    border-bottom:orange solid 0.2vw;
+    width:30vw;
+    font-weight:600;
+    font-size:xxx-large;
+  }
+  .missiontext{
+    position:absolute;
+    display:flex;
+    left:60vw;
+    top:8vw;
+    color:white;
+    width:35vw;
+  }
+
+  .mission img{
+    position:absolute;
+    top:1vw;
+    left:5vw;
+    height:28vw;
+    width:auto;
+    border-radius:1vw;
+  }
+  .reveal{
+    opacity:0;
+    transition:all ease 2s;
+    transform: translateY(150px);
+  }
+  .active{
+    opacity:1;
+    transform: translateY(0px);
+  }
