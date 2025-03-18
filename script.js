@@ -1,44 +1,78 @@
-var scrolltoservices=document.querySelector('.services');
-var scrolltocontact=document.querySelector(".contact");
-//Change navbar on scoll
-function scrollValue() {
-    var navbar = document.querySelector('.navhead');
-    var scroll = window.scrollY;
-    if (scroll < 530) {
-        navbar.classList.remove('navhead2');
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll("nav a");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const themeToggle = document.getElementById("theme-toggle");
+  const scrollTopBtn = document.getElementById("scroll-top");
+  
+
+  // Load theme from local storage
+  if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light-mode");
+      themeToggle.textContent = "☀️";
+  }
+
+  // Smooth Scrolling
+  links.forEach(link => {
+      link.addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+
+          // Close mobile menu after clicking
+          if (navLinks.classList.contains("active")) {
+              navLinks.classList.remove("active");
+          }
+      });
+  });
+
+  // Toggle Mobile Menu
+  menuToggle.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+  });
+
+  // Theme Toggle
+  themeToggle.addEventListener("click", function () {
+      document.body.classList.toggle("light-mode");
+
+      if (document.body.classList.contains("light-mode")) {
+          localStorage.setItem("theme", "light");
+          themeToggle.textContent = "☀️";
+      } else {
+          localStorage.setItem("theme", "dark");
+          themeToggle.textContent = "🌙";
+      }
+  });
+
+  // Scroll to Top Button
+  window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+          scrollTopBtn.style.display = "block";
+      } else {
+          scrollTopBtn.style.display = "none";
+      }
+  });
+
+  scrollTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY < window.innerHeight) {
+            navbar.classList.add("transparent");
+        } else {
+            navbar.classList.remove("transparent");
+        }
+    });
+});
+window.scrollcontact = function () {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
     } else {
-        navbar.classList.add('navhead2');
+        console.error("Element with ID 'contact' not found.");
     }
-}
-window.addEventListener('scroll', scrollValue);
-
-
-//Scrolling to a specific element on click
-document.querySelector(".navservices").addEventListener("click",scrollservice);
-document.querySelector(".navcontact").addEventListener("click",funcscrolltocontact);
-//scrolls to service
-function scrollservice(){
-    scrolltoservices.scrollIntoView();
 };
-//scrolls to contact
-function funcscrolltocontact(){
-    scrolltocontact.scrollIntoView();
-}
-
-window.addEventListener("scroll",revealfunc);
-
-function revealfunc(){
-    var items=document.querySelectorAll(".reveal");
-    for(var i=0;i<items.length;i++){
-        var windowheight=window.innerHeight;
-        var scrollheight=0;
-        var view=items[i].getBoundingClientRect().top;
-        if(view<windowheight-scrollheight){
-            items[i].classList.add("active");
-        }
-        else{
-            items[i].classList.remove("active");
-        }
-
-    }
-}
